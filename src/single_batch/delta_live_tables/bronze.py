@@ -1,4 +1,8 @@
 # Databricks notebook source
+pip install dlt
+
+# COMMAND ----------
+
 import dlt
 import json
 from pyspark.sql import functions as F

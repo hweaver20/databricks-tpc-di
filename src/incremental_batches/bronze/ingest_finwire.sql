@@ -1,11 +1,11 @@
 -- Databricks notebook source
--- CREATE OR REPLACE TABLE ${catalog}.${wh_db}_${scale_factor}_stage.FinWire (
---   rectype STRING COMMENT 'Indicates the type of table into which this record will eventually be parsed: CMP FIN or SEC',
---   recdate DATE COMMENT 'Date of the record',
---   value STRING COMMENT 'Pre-parsed String Values of all FinWire files'
--- ) 
--- PARTITIONED BY (rectype)
--- TBLPROPERTIES (${tbl_props});
+CREATE OR REPLACE TABLE ${catalog}.${wh_db}_${scale_factor}_stage.FinWire (
+   rectype STRING COMMENT 'Indicates the type of table into which this record will eventually be parsed: CMP FIN or SEC',
+   recdate DATE COMMENT 'Date of the record',
+   value STRING COMMENT 'Pre-parsed String Values of all FinWire files'
+ ) 
+ PARTITIONED BY (rectype)
+ TBLPROPERTIES (${tbl_props});
 
 -- COMMAND ----------
 
